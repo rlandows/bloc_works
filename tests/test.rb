@@ -1,0 +1,23 @@
+# require_relative '../lib/bloc_works.rb'
+require "bloc_works"
+require 'rack/test'
+require 'test/unit'
+
+
+
+
+class CallTest < Test::Unit::TestCase
+  include Rack::Test::Methods
+
+  def app
+    BlocWorks::Application.new
+  end
+
+  def test_response_is_ok
+    get "/"
+
+    assert last_response.ok?
+    assert_equal last_response.body, "Hello, Blocheads"
+  end
+
+end
