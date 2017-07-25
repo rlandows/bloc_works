@@ -23,4 +23,5 @@
    spec.add_development_dependency 'rack', '~> 2.0', '>= 2.0.3'
    spec.add_development_dependency "rack-test", "~> 0.6.3"
    spec.add_development_dependency 'test-unit', '~> 3.2', '>= 3.2.3'
+   spec.add_runtime_dependency "erubis", "~>2.7"
  end
