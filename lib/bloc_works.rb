@@ -14,8 +14,6 @@ module BlocWorks
       elsif env["PATH_INFO"]== '/favicon.ico'
         return fav_icon(env)
       else
-          # puts "this is body 1 #{body[0]}"
-          # puts "this is body 2 #{body[1]}"
           puts body = controller_and_action(env)
           last_one = body[1].to_sym
           [200, {'Content-Type' => 'text/html'}, [body[0].new(env).send(body[1])]]

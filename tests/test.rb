@@ -3,7 +3,7 @@ require "bloc_works"
 require 'rack/test'
 require 'test/unit'
 
-$LOAD_PATH << File.join(File.dirname(__FILE__), "controllers")
+# $LOAD_PATH << File.join(File.dirname(__FILE__), "controllers")
 
 
 
@@ -29,11 +29,5 @@ class CallTest < Test::Unit::TestCase
     assert_equal last_response.status, 404
   end
 
-  def random_test
-
-    get "/blah/woo"
-
-    assert_equal last_response.body, "Gotcha"
-  end
 
 end
